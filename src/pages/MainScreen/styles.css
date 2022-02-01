@@ -1,0 +1,9 @@
+body {
+    background-color: hsl(228, 33%, 97%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
