@@ -1,0 +1,9 @@
+.text-container {
+    grid-area: 2/2/3/4;
+}
+
+@media only screen and (max-width: 740px) {
+    .text-container {
+        grid-area: 2/1/3/3;
+    }
+}

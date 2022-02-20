@@ -1,5 +1,20 @@
 .comment-main {
     background: white;
-    margin: 10px;
-    width: 730px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 168px;
+    margin: 10px 0;
+    padding-right: 25px;
+    padding-top: 25px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 740px) {
+    .comment-main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        width: 60%;
+    }
 }

@@ -1,0 +1,47 @@
+.plain-button {
+    background-color: hsl(228, 33%, 97%);
+    border: none;
+    color: hsl(239, 57%, 85%);
+    cursor: pointer;
+    height: 30px;
+    padding: 0;
+    width: 40px;
+}
+
+.plain-button:hover {
+    color: hsl(238, 40%, 52%);  
+}
+
+.top-button {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.bottom-button {
+    border-radius: 0px 0px 10px 10px;   
+}
+
+.score{
+    background-color: hsl(228, 33%, 97%);
+    color: hsl(238, 40%, 52%);
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    width: 40px;
+}
+
+.vote-container {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    grid-area: 1/1/4/2;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    width: 90px;
+}
+
+@media only screen and (max-width: 740px) {
+    .vote-container {
+        grid-area: 3/1/4/2;
+    }
+}
