@@ -1,3 +1,8 @@
+.controls {
+    height: 100px;
+    width: 40px;
+}
+
 .plain-button {
     background-color: hsl(228, 33%, 97%);
     border: none;
@@ -30,18 +35,38 @@
 }
 
 .vote-container {
-    align-items: center;
+    align-items: flex-start;
     background-color: transparent;
     display: flex;
     grid-area: 1/1/4/2;
     flex-direction: column;
     justify-content: start;
     text-align: center;
-    width: 90px;
+    width: 65px;
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 760px) {
     .vote-container {
+        flex-direction: row;
         grid-area: 3/1/4/2;
+    }
+
+    .controls {
+        display: flex;
+        height: 40px;
+        width: 100px;
+    }
+
+    .plain-button {
+        height: 40px;
+        width: 30px;
+    }
+
+    .top-button {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .bottom-button {
+        border-radius: 0px 10px 10px 00px;   
     }
 }

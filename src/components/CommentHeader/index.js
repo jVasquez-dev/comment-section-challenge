@@ -5,25 +5,27 @@ import { ReactComponent as EditIcon } from '../../images/icon-edit.svg';
 
 import './styles.css'
 
-export const CommentHeader = ({ createdAt, comments, user, currentUser, id, setEdit, setCommentData, replies, ...rest }) => {
-    console.log(comments)
-    const { commentId } = rest
+export const CommentHeader = ({commentId, setOpenModal, user, currentUser, id, setEdit, setState}) => {
 
     const handleDelete = () => {
+        setState( prev => ({
+            ...prev,
+            activeComment: {
+                commentId,
+                id
+            }
+        }))
+        setOpenModal(true)
+    }
 
-        if (commentId) {
-            const updatedReplies = replies.filter(rep => rep.id !== id)
-            const newComments = comments.map(com => com.id === commentId ? { ...com, replies: updatedReplies } : com)
-            setCommentData(state => ({ ...state, comments: newComments }))
-            return
-        }
-
-        const updatedComments = comments.filter(com => com.id !== id)
-        setCommentData(state => ({ ...state, comments: updatedComments }))
+    const handleReply = () => {
+        setState( prev => ({
+            ...prev,
+            activeReplies: prev.activeReplies.find( v => v === id ) ? prev.activeReplies.filter( v => v !== id) : [...prev.activeReplies, id]
+        }))
     }
 
     return (
-
         <div className='header-container'>
             {currentUser.username === user.username ?
                 <>
@@ -40,11 +42,10 @@ export const CommentHeader = ({ createdAt, comments, user, currentUser, id, setE
                     </div>
                 </>
                 :
-                <div className='icon-content'>
+                <div className='icon-content cursor' onClick={handleReply}>
                     <ReplyIcon className='icon' />
                     <p className='blue-text'>Reply</p>
                 </div>
-
             }
         </div>
     )

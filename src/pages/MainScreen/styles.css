@@ -13,33 +13,38 @@ body, * {
 
 .container {
     margin: 0 auto;
-    width: 735px;
+    margin-top: 40px;
+    width: 730px;
 }
 
-.controller {
-    height: 100px;
-    margin: 0;
-}
-
-.response-container {
+.reply-container {
     margin-left: 90px;
     position: relative;
-    width: 645px;
+    width: 640px;
 }
 
-.response-container::before {
+.reply-container::before {
     content: '';
     position: absolute;
     background-color: hsl(223, 19%, 93%);
-    width: 2px;
+    width: 3px;
     height: 92%;
     padding: 0;
     top: 10px;
     left: -45px;
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 760px) {
     .container {
-        width: 80%;
+        width: 95%;
+    }
+
+    .reply-container {
+        margin-left: 5%;
+        width: 95%;
+    }
+
+    .reply-container::before { 
+        left: -5%;
     }
 }

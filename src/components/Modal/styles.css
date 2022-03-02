@@ -1,0 +1,61 @@
+
+ .bg-red {
+  background-color: hsl(358, 79%, 66%);
+}
+
+.bg-gray {
+  background-color: hsl(211, 10%, 45%);
+}
+
+.btn-big {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 160px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalBackground {
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(122, 122, 124, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer {
+    width: 400px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    height: 255px;
+    padding: 35px; 
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .margin-30 {
+    margin-bottom: 30px;
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .modalContainer {
+        width: 95%;
+    }
+}
