@@ -77,7 +77,7 @@ export const Response = ({ currentUser, id, comment, commentId, setState, reply}
       <div className='img-container'>
         <img className='profile-pic' src={require(`../../${currentUser.image.png}`)} alt='profile pic' />
       </div>
-      <textarea className='comment-area' name='content' placeholder='Add a comment...' />
+      <textarea className='comment-area' name='content' placeholder='Add a comment...'  />
       <button className='btn btn-grid' type='submit'>SEND</button>
     </form>
   )

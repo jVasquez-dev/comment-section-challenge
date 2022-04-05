@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 import './styles.css'
 
 export const EditText = ({commentId, content, id, setCommentData, replyingTo, setEdit, setState}) => {
-  const text = replyingTo ? `@${replyingTo} ` + content : content
-  const [data, setData] = useState(text)
+  const [data, setData] = useState(content)
 
   const handleSubmit = (e) => {
     
